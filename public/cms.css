@@ -9,7 +9,7 @@ body {
 }
 
 .flash {
-  max-width: 960px;
+  max-width: 700px;
   padding: 10px 20px;
   margin: 20px auto 1.5em auto;
   color: #3399cc;
@@ -31,13 +31,8 @@ body {
   background: #CBF2E5; 
 }
 
-form .inline {
+.inline form {
   display: inline-block;
-}
-
-form .centre {
-  align-self: center;
-  margin: 20px auto 1.5em auto;
 }
 
 #newdoc {

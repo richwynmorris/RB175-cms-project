@@ -19,7 +19,9 @@
 <br>
 
 <% if session[:user] %>
-	<form class="centre" action="/signout" method="post">
+	<form class="inline" action="/signout" method="post">
+		<i> Signed in as <%= session[:user] %></i><br>
+		<br>
 		<input type="submit" value ="Sign Out">
 	</form>
 <% end %>

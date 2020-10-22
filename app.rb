@@ -67,7 +67,8 @@ post "/signin" do
     session[:success] = "Welcome #{session[:user].capitalize}"
     redirect '/'
   else
-    session[:error] = "Invalid Credentials"
+    session[:error] = "Invalid credentials"
+    status 422
     erb :sign_in, layout: :layout
   end
 end
