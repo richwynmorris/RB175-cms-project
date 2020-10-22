@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head> 
+    <link rel="icon" href="/images/favicon.ico">
+    <title>CMS</title>
+  </head>
+  <header>
+    <link href="/cms.css" rel="stylesheet" type="text/css" />
+  </header>
+  <body>
+    <% if session[:success] %>
+      <div class="flash success">
+        <p><%= session.delete(:success) %></p>
+      </div>
+    <% end %>
+
+    <% if session[:error] %>
+      <div class="flash error">
+        <p><%= session.delete(:error) %></p>
+      </div>
+    <% end %>
+
+    <% if session[:message] %>
+      <div class="message">
+        <p><%= session.delete(:message) %></p>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

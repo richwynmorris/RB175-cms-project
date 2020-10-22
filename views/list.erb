@@ -1,18 +1,25 @@
-
-<% if session[:success] %>
-  <div class="flash success">
-    <p><%= session.delete(:success) %></p>
-  </div>
-<% end %>
-
-<% if session[:error] %>
-  <div class="flash error">
-    <p><%= session.delete(:error) %></p>
-  </div>
-<% end %>
-
 <ul>
 	<% @files.each do |file| %>
-		<li><a href="/<%= file %>"><%= file %></a></li>
+		<li>
+			<a href="/<%= file %>"><%= file %></a>
+			<a href="/<%= file %>/edit">Edit</a>
+			<br>
+			<br>
+			<form class="inline" method="post" action="/<%= file %>/delete">
+        		<button type="submit">delete</button>
+      		</form>
+      		<br>
+      		<br>
+		</li>
 	<% end %>
+	<a id="newdoc" href="/new/document">New Document</a>
 </ul>
+
+<br>
+<br>
+
+<% if session[:user] %>
+	<form class="centre" action="/signout" method="post">
+		<input type="submit" value ="Sign Out">
+	</form>
+<% end %>
