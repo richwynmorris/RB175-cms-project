@@ -38,3 +38,8 @@ body {
 #newdoc {
 	font-weight: bold;
 }
+
+.user-status {
+  font-style: italic;
+  font-size: 0.9em;
+}

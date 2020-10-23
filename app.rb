@@ -74,7 +74,7 @@ post "/signin" do
 end
 
 post "/signout" do
-  session.delete(:username) && session.delete[:password]
+  session.delete(:username) && session.delete(:password)
   session[:message] = "You have been signed out"
   redirect '/signin'
 end
