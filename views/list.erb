@@ -20,10 +20,9 @@
 
 <% if session[:user] %>
 	<form class="inline" action="/signout" method="post">
-		<p class="user-status"> Signed in as <%= session[:user] %></p><br>
-		<br>
+		<p class="user-status"> Signed in as <%= session[:user] %></p>
 		<input type="submit" value ="Sign Out">
 	</form>
 <% else %>
-  	<p class="user-status"><a href="/users/signin">Sign In</a></p>
+  	<p class="user-status"><a href="/signin">Sign In</a></p>
 <% end %>
